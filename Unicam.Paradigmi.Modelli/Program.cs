@@ -1,2 +1,6 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿using Unicam.Paradigmi.Modelli;
+
+var prova = new testDB();
+prova.addBook();
+
+Console.ReadLine();
