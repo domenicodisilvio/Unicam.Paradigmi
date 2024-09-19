@@ -1,27 +1,13 @@
+using Unicam.Paradigmi.Application.Extension;
+using Unicam.Paradigmi.Modelli.Extension;
+using Unicam.Paradigmi.Web.Extension;
+
 var builder = WebApplication.CreateBuilder(args);
 
-
-//INIZIALIZZO I SERVIZI
-builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+builder.Services.AddApplicationServices(builder.Configuration).AddModelServices(builder.Configuration).AddWebServices(builder.Configuration);
 
 var app = builder.Build();
 
-//INIZIALIZZO I MIDDLWARE
-
-// Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
-
-app.UseHttpsRedirection();
-
-app.UseAuthorization();
-
-app.MapControllers();
+app.AddWebMiddleware();
 
 app.Run();

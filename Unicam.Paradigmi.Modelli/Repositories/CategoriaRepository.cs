@@ -21,7 +21,7 @@ namespace Unicam.Paradigmi.Modelli.Repositories
         public List<Libro> ControlloEliminazione(Categoria categoria)
         {
             var query = _ctx.Libri.AsQueryable();
-            query = query.Where(o => o.Categoria.Equals(categoria.Nome));
+            query = query.Where(o => o.nomeCategoria.Equals(categoria.Nome));
             return query.ToList();
         }
     }

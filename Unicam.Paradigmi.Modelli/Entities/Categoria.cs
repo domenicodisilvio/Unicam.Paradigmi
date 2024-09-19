@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace Unicam.Paradigmi.Modelli.Entities
 {
     public class Categoria{
-        public string Nome { get; set; }
+        public string Nome { get; set; } = string.Empty;
         public ICollection<Libro> Libri { get; set; }
     }
 }

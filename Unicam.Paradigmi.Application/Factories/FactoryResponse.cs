@@ -24,7 +24,7 @@ namespace Unicam.Paradigmi.Application.Factories
         {
             var response = new ResponseBase<string>();
             response.IsSuccess = false;
-            response.Errors = new List<string>();
+            response.Errors = new List<string>()
             {
                 exception.Message
             };
