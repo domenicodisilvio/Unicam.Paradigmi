@@ -32,5 +32,20 @@ namespace Unicam.Paradigmi.Web.Controllers
             response.Utente = new Application.Models.Dtos.DtosUtente(utente);
             return Ok(FactoryResponse.WhithSucces(response));
         }
+
+
+
+        [HttpPost]
+        [Route("login")]
+        public IActionResult Login(RequestCreateLogin request)
+        {
+            var utente = request.ToEntity();
+            if (_serviceUtente.VerifyUtente(utente) == false)
+            {
+                throw new Exception("Email o password errati");
+            }
+            string token = _serviceUtente.CreateToken(utente);
+            return Ok(FactoryResponse.WhithSucces(new ResponseCreateLogin(token)));
+        }
     }
 }

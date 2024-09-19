@@ -5,9 +5,14 @@ VisualStudioVersion = 17.11.35222.181
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Unicam.Paradigmi.Modelli", "Unicam.Paradigmi.Modelli\Unicam.Paradigmi.Modelli.csproj", "{D33D2AA9-0249-4EBE-B2D3-42790052899C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unicam.Paradigmi.Web", "Unicam.Paradigmi.Web\Unicam.Paradigmi.Web.csproj", "{42444926-7D42-45E7-B167-3B23F78CF76A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Unicam.Paradigmi.Web", "Unicam.Paradigmi.Web\Unicam.Paradigmi.Web.csproj", "{42444926-7D42-45E7-B167-3B23F78CF76A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unicam.Paradigmi.Application", "Unicam.Paradigmi.Application\Unicam.Paradigmi.Application.csproj", "{7F018C25-5CAF-4427-A659-9A060FA6007D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Unicam.Paradigmi.Application", "Unicam.Paradigmi.Application\Unicam.Paradigmi.Application.csproj", "{7F018C25-5CAF-4427-A659-9A060FA6007D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DB", "DB", "{616E700E-2186-4DD2-92F5-0F76CB1E54CB}"
+	ProjectSection(SolutionItems) = preProject
+		dump.sql = dump.sql
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

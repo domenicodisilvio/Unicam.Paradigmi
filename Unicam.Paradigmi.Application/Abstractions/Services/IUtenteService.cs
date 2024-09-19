@@ -7,5 +7,7 @@ namespace Unicam.Paradigmi.Application.Abstractions.Services
         void AddUtente(Utente utente);
         bool VerifyUtente(Utente utente);
         bool VerifyEmail(Utente utente);
+        string CreateToken(Utente utente);
+
     }
 }

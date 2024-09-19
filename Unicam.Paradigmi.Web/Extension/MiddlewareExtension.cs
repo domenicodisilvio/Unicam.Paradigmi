@@ -22,6 +22,10 @@ namespace Unicam.Paradigmi.Web.Extension
 
             app.UseHttpsRedirection();
 
+            app.UseAuthentication();
+
+            app.UseAuthorization();
+
             app.UseExceptionHandler(appError =>
             {
                 appError.Run(async context =>
